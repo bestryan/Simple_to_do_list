@@ -6,8 +6,8 @@ export default function NewTask({ newTask, handleChange, handleSubmit }) {
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
     const day = date.getDate();
-    const hours = date.getHours();
-    const mins = date.getMinutes();
+    const hours = (date.getHours() < 10 ? "0" : "") + date.getHours();
+    const mins = (date.getMinutes() < 10 ? "0" : "") + date.getMinutes();
 
     const d = `${day}/${month}/${year} ${hours}:${mins}`
 
